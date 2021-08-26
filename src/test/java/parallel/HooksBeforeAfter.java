@@ -37,7 +37,9 @@ public class HooksBeforeAfter extends Base {
 	*/
 	
 	@After(order=0)
-	public void browserQuit(Scenario scenario) {		
+	public void browserQuit(Scenario scenario) throws InterruptedException {
+		
+		Thread.sleep(3000l);
 		
 		if (scenario.isFailed()) {
 

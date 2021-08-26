@@ -52,11 +52,24 @@ public class CalendarPage {
 		calendarTextBox.click();
 		int currentYear = Calendar.getInstance().get(Calendar.YEAR);
 		int expectedYear = Integer.parseInt(year);	
+		
+		while (!(calendarYear.getText().equals(year) && calendarMonth.getText().equals(month)))
+		{
+			if (currentYear <= expectedYear) {
+				nextButton.click();
+			} else {
+				prevButton.click();
+			}
+			
+		}
+		
+		
+		/*
 				
 		// To select year and month
 		if (currentYear <= expectedYear) {
 
-			while (!(calendarYear.getText().equals(year) && calendarMonth.getText().equals(month))) {
+			 {
 
 				nextButton.click();
 			}
@@ -68,6 +81,10 @@ public class CalendarPage {
 			}
 		}
 		
+		
+		
+		*/
+		
 		// To select day
 		List<WebElement> element = calendarDay;
 		
@@ -77,7 +94,9 @@ public class CalendarPage {
 				
 				element.get(i).click();
 			}
-		}		
+		}
+		
+		
 
 	}
 

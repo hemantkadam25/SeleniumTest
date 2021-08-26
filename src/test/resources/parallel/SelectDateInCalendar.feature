@@ -8,4 +8,4 @@ Feature: To select date in calendar.
     
     Examples:
     | Day | Month  | Year |
-    | 31  | August | 2025 |
+    | 01  | February | 2020 |
